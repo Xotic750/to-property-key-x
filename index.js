@@ -1,6 +1,6 @@
 /**
  * @file Converts argument to a value that can be used as a property key.
- * @version 1.0.0
+ * @version 2.0.0
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -12,11 +12,10 @@
 var hasSymbols = require('has-symbol-support-x');
 var toPrimitive = require('to-primitive-x');
 var toStr = require('to-string-x');
-var symbolToStr = hasSymbols && Symbol.prototype.toString;
 
 var $toPropertyKey = function toPropertyKey(argument) {
   var key = toPrimitive(argument, String);
-  return hasSymbols && typeof key === 'symbol' ? symbolToStr.call(key) : toStr(key);
+  return hasSymbols && typeof key === 'symbol' ? key : toStr(key);
 };
 
 /**
@@ -30,5 +29,7 @@ var $toPropertyKey = function toPropertyKey(argument) {
  * toPropertyKey(); // 'undefined'
  * toPropertyKey(1); // '1'
  * toPropertyKey(true); // 'true'
+ * var symbol = Symbol('a');
+ * toPropertyKey(symbol); // symbol
  */
 module.exports = $toPropertyKey;

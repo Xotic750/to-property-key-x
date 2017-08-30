@@ -23,7 +23,7 @@
 ## to-property-key-x
 Converts argument to a value that can be used as a property key.
 
-**Version**: 1.0.0  
+**Version**: 2.0.0  
 **Author**: Xotic750 <Xotic750@gmail.com>  
 **License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
 **Copyright**: Xotic750  
@@ -46,4 +46,6 @@ var toPropertyKey = require('to-property-key-x');
 toPropertyKey(); // 'undefined'
 toPropertyKey(1); // '1'
 toPropertyKey(true); // 'true'
+var symbol = Symbol('a');
+toPropertyKey(symbol); // symbol
 ```

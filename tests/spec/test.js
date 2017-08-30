@@ -58,6 +58,7 @@ var objects = [
 ];
 
 var symbols = hasSymbols ? [Symbol.iterator, Symbol('foo')] : [];
+var objectSymbols = symbols.map(Object);
 
 var numbers = [
   0,
@@ -83,7 +84,11 @@ describe('toPropertyKey', function () {
     });
 
     symbols.forEach(function (symbol) {
-      expect(toPropertyKey(symbol)).toBe(Symbol.prototype.toString.call(symbol));
+      expect(toPropertyKey(symbol)).toBe(symbol);
+    });
+
+    objectSymbols.forEach(function (objectSymbol, index) {
+      expect(toPropertyKey(objectSymbol)).toBe(symbols[index]);
     });
   });
 });
