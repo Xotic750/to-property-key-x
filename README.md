@@ -23,16 +23,16 @@
 ## to-property-key-x
 Converts argument to a value that can be used as a property key.
 
-**Version**: 2.0.0  
+**Version**: 2.0.1  
 **Author**: Xotic750 <Xotic750@gmail.com>  
 **License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
 **Copyright**: Xotic750  
 <a name="exp_module_to-property-key-x--module.exports"></a>
 
-### `module.exports` ⇒ <code>string</code> \| <code>symbol</code> ⏏
+### `module.exports(argument)` ⇒ <code>string</code> \| <code>symbol</code> ⏏
 This method Converts argument to a value that can be used as a property key.
 
-**Kind**: Exported member  
+**Kind**: Exported function  
 **Returns**: <code>string</code> \| <code>symbol</code> - The converted argument.  
 
 | Param | Type | Description |
