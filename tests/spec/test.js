@@ -91,4 +91,10 @@ describe('toPropertyKey', function () {
       expect(toPropertyKey(objectSymbol)).toBe(symbols[index]);
     });
   });
+
+  it('should throw if not coercible', function () {
+    expect(function () {
+      toPropertyKey(Object.create(null));
+    }).toThrow();
+  });
 });
