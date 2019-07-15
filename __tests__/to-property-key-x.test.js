@@ -1,28 +1,6 @@
-let toPropertyKey;
+import toPropertyKey from '../src/to-property-key-x';
 
-if (typeof module === 'object' && module.exports) {
-  require('es5-shim');
-  require('es5-shim/es5-sham');
-
-  if (typeof JSON === 'undefined') {
-    JSON = {};
-  }
-
-  require('json3').runInContext(null, JSON);
-  require('es6-shim');
-  const es7 = require('es7-shim');
-  Object.keys(es7).forEach(function(key) {
-    const obj = es7[key];
-
-    if (typeof obj.shim === 'function') {
-      obj.shim();
-    }
-  });
-  toPropertyKey = require('../../index.js');
-} else {
-  toPropertyKey = returnExports;
-}
-
+/* eslint-disable-next-line compat/compat */
 const hasSymbols = typeof Symbol === 'function' && typeof Symbol('') === 'symbol';
 
 const coercibleObject = {
@@ -54,6 +32,7 @@ const toStringOnlyObject = {
 
 const objects = [{}, coercibleObject, toStringOnlyObject, valueOfOnlyObject];
 
+/* eslint-disable-next-line compat/compat */
 const symbols = hasSymbols ? [Symbol.iterator, Symbol('foo')] : [];
 const objectSymbols = symbols.map(Object);
 
@@ -66,10 +45,12 @@ const nonSymbolPrimitives = [].concat(nullPrimitives, booleans, strings, numbers
 
 describe('toPropertyKey', function() {
   it('is a function', function() {
+    expect.assertions(1);
     expect(typeof toPropertyKey).toBe('function');
   });
 
   it('should return the matching value', function() {
+    expect.assertions(19);
     objects.concat(nonSymbolPrimitives).forEach(function(value) {
       expect(toPropertyKey(value)).toBe(String(value));
     });
@@ -84,8 +65,9 @@ describe('toPropertyKey', function() {
   });
 
   it('should throw if not coercible', function() {
+    expect.assertions(1);
     expect(function() {
       toPropertyKey(Object.create(null));
-    }).toThrow();
+    }).toThrowErrorMatchingSnapshot();
   });
 });

@@ -21,15 +21,17 @@
 <a name="module_to-property-key-x"></a>
 
 ## to-property-key-x
+
 Converts argument to a value that can be used as a property key.
 
 **Version**: 2.0.2  
 **Author**: Xotic750 <Xotic750@gmail.com>  
-**License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
+**License**: [MIT](https://opensource.org/licenses/MIT)  
 **Copyright**: Xotic750  
 <a name="exp_module_to-property-key-x--module.exports"></a>
 
 ### `module.exports(argument)` ⇒ <code>string</code> \| <code>symbol</code> ⏏
+
 This method Converts argument to a value that can be used as a property key.
 
 **Kind**: Exported function  
@@ -38,21 +40,21 @@ This method Converts argument to a value that can be used as a property key.
 
 - <code>TypeError</code> If argument is not a symbol and is not coercible to a string.
 
-
-| Param | Type | Description |
-| --- | --- | --- |
+| Param    | Type            | Description                               |
+| -------- | --------------- | ----------------------------------------- |
 | argument | <code>\*</code> | The argument to onvert to a property key. |
 
-**Example**  
+**Example**
+
 ```js
-var toPropertyKey = require('to-property-key-x');
+import toPropertyKey from 'to-property-key-x';
 
-toPropertyKey(); // 'undefined'
-toPropertyKey(1); // '1'
-toPropertyKey(true); // 'true'
+console.log(toPropertyKey()); // 'undefined'
+console.log(toPropertyKey(1)); // '1'
+console.log(toPropertyKey(true)); // 'true'
 
-var symbol = Symbol('a');
-toPropertyKey(symbol); // symbol
+const symbol = Symbol('a');
+console.log(toPropertyKey(symbol)); // symbol
 
 toPropertyKey(Object.create(null)); // TypeError
 ```
