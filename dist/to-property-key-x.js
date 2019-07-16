@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-07-15T12:29:32.295Z",
+  "date": "2019-07-16T10:51:37.613Z",
   "describe": "",
   "description": "Converts argument to a value that can be used as a property key.",
   "file": "to-property-key-x.js",
   "hash": "29bce884cce4a762fca5",
   "license": "MIT",
-  "version": "3.0.2"
+  "version": "3.0.3"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {

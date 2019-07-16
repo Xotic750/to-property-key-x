@@ -1,6 +1,5 @@
 import toPropertyKey from '../src/to-property-key-x';
 
-/* eslint-disable-next-line compat/compat */
 const hasSymbols = typeof Symbol === 'function' && typeof Symbol('') === 'symbol';
 
 const coercibleObject = {
@@ -32,7 +31,6 @@ const toStringOnlyObject = {
 
 const objects = [{}, coercibleObject, toStringOnlyObject, valueOfOnlyObject];
 
-/* eslint-disable-next-line compat/compat */
 const symbols = hasSymbols ? [Symbol.iterator, Symbol('foo')] : [];
 const objectSymbols = symbols.map(Object);
 
