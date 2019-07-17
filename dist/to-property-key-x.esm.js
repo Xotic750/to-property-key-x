@@ -11,9 +11,11 @@ import toStr from 'to-string-x';
  * @returns {string|Symbol} The converted argument.
  */
 
-export default function toPropertyKey(argument) {
+var toPropertyKey = function toPropertyKey(argument) {
   var key = toPrimitive(argument, String);
   return hasSymbols && _typeof(key) === 'symbol' ? key : toStr(key);
-}
+};
+
+export default toPropertyKey;
 
 //# sourceMappingURL=to-property-key-x.esm.js.map

@@ -9,8 +9,10 @@ import toStr from 'to-string-x';
  * @throws {TypeError} If argument is not a symbol and is not coercible to a string.
  * @returns {string|Symbol} The converted argument.
  */
-export default function toPropertyKey(argument) {
+const toPropertyKey = function toPropertyKey(argument) {
   const key = toPrimitive(argument, String);
 
   return hasSymbols && typeof key === 'symbol' ? key : toStr(key);
-}
+};
+
+export default toPropertyKey;
