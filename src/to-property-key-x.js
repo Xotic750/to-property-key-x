@@ -7,7 +7,7 @@ import toStr from 'to-string-x';
  *
  * @param {*} argument - The argument to convert to a property key.
  * @throws {TypeError} If argument is not a symbol and is not coercible to a string.
- * @returns {string|Symbol} The converted argument.
+ * @returns {string|symbol} The converted argument.
  */
 const toPropertyKey = function toPropertyKey(argument) {
   const key = toPrimitive(argument, String);

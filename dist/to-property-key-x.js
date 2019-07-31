@@ -2,11 +2,11 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-07-29T19:20:48.277Z",
+  "date": "2019-07-31T16:01:59.009Z",
   "describe": "",
   "description": "Converts argument to a value that can be used as a property key.",
   "file": "to-property-key-x.js",
-  "hash": "e75c4a7593ac94006424",
+  "hash": "223919c0f5e876ce725b",
   "license": "MIT",
   "version": "3.0.19"
 }
@@ -1201,7 +1201,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
  *
  * @param {*} argument - The argument to convert to a property key.
  * @throws {TypeError} If argument is not a symbol and is not coercible to a string.
- * @returns {string|Symbol} The converted argument.
+ * @returns {string|symbol} The converted argument.
  */
 
 var to_property_key_x_esm_toPropertyKey = function toPropertyKey(argument) {
