@@ -2,7 +2,7 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-08-13T11:27:26.331Z",
+  "date": "2019-08-13T13:13:19.318Z",
   "describe": "",
   "description": "Converts argument to a value that can be used as a property key.",
   "file": "to-property-key-x.js",
