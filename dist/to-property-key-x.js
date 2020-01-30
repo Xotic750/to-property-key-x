@@ -2,11 +2,11 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2017",
-  "date": "2019-09-05T19:27:32.392Z",
+  "date": "2020-01-30T13:46:52.681Z",
   "describe": "",
   "description": "Converts argument to a value that can be used as a property key.",
   "file": "to-property-key-x.js",
-  "hash": "32d0783adb61a05a0d31",
+  "hash": "6403285adaf5adc27eab",
   "license": "MIT",
   "version": "3.1.2"
 }
@@ -1629,7 +1629,7 @@ var to_primitive_x_esm_toPrimitive = function toPrimitive(input, preferredType) 
 
 
 // CONCATENATED MODULE: ./dist/to-property-key-x.esm.js
-function to_property_key_x_esm_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { to_property_key_x_esm_typeof = function _typeof(obj) { return typeof obj; }; } else { to_property_key_x_esm_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return to_property_key_x_esm_typeof(obj); }
+function to_property_key_x_esm_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { to_property_key_x_esm_typeof = function _typeof(obj) { return typeof obj; }; } else { to_property_key_x_esm_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return to_property_key_x_esm_typeof(obj); }
 
 
 
